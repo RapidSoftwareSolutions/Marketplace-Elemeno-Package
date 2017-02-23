@@ -1,0 +1,439 @@
+{
+  "package": "Elemeno",
+  "tagline": "Elemeno API",
+  "description": "Elemeno",
+  "image": "http:\/\/logo.clearbit.com\/elemeno.io",
+  "repo": "https:\/\/github.com\/RapidSoftwareSolutions\/Marketplace-Elemeno-Package",
+  "keywords": [
+  ],
+  "accounts": {
+    "domain": "elemeno.io",
+    "credentials": [
+      "apiKey"
+    ]
+  },
+  "blocks": [
+    {
+      "name": "getAllSingleItems",
+      "description": "Retrieve an array of all Single Items.",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "Api key obtained from Elemeno",
+          "required": true
+        },
+        {
+          "name": "pageSize",
+          "type": "Number",
+          "info": "Number of the results at the page",
+          "required": false
+        },
+        {
+          "name": "pageNumber",
+          "type": "Number",
+          "info": "Number of the results page",
+          "required": false
+        },
+        {
+          "name": "sortBy",
+          "type": "String",
+          "info": "Sort option. Possible values: $dateUpdated(default), $dateCreated",
+          "required": false
+        },
+        {
+          "name": "sortOrder",
+          "type": "String",
+          "info": "Sort order. Possible values: DESC(default), ASC",
+          "required": false
+        },
+        {
+          "name": "titleFilterOperation",
+          "type": "String",
+          "info": "This keyword will allow you to filter by your title, regardless if it has been renamed. If was renamed, you can additionally use that name. Possible values: $equals, $not, $contains, $startsWith, $endsWith, $lessThan, $lessThanOrEqual, $greaterThan, $greaterThanOrEqual",
+          "required": false
+        },
+        {
+          "name": "titleFilterContent",
+          "type": "String",
+          "info": "Content of the title filter",
+          "required": false
+        },
+        {
+          "name": "priceFilterOperation",
+          "type": "String",
+          "info": "This keyword will allow you to filter by your price. Possible values: $equals, $lessThan, $lessThanOrEqual, $greaterThan, $greaterThanOrEqual",
+          "required": false
+        },
+        {
+          "name": "priceFilterContent",
+          "type": "Number",
+          "info": "Content of the price filter",
+          "required": false
+        },
+        {
+          "name": "timestampUpdatedFilterOperation",
+          "type": "String",
+          "info": "This keyword will allow you to filter by update timestamp. Possible values: $lessThan, $greaterThan",
+          "required": false
+        },
+        {
+          "name": "timestampUpdatedFilterContent",
+          "type": "Number",
+          "info": "Content of the update timestamp filter",
+          "required": false
+        },
+        {
+          "name": "timestampPublishedFilterOperation",
+          "type": "String",
+          "info": "This keyword will allow you to filter by create timestamp. Possible values: $lessThan, $greaterThan",
+          "required": false
+        },
+        {
+          "name": "timestampPublishedFilterContent",
+          "type": "Number",
+          "info": "Content of the create timestamp filter",
+          "required": false
+        },
+        {
+          "name": "editionFilterOperation",
+          "type": "String",
+          "info": "This keyword will allow you to filter by edition. Possible values: $equals, $startsWith, $endsWith, $not",
+          "required": false
+        },
+        {
+          "name": "editionFilterContent",
+          "type": "String",
+          "info": "Content of the edition filter",
+          "required": false
+        },
+        {
+          "name": "isAvailable",
+          "type": "Boolean",
+          "info": "If item is available",
+          "required": false
+        },
+        {
+          "name": "hasHardcover",
+          "type": "Boolean",
+          "info": "If item has hardcover",
+          "required": false
+        },
+        {
+          "name": "authorsIdList",
+          "type": "String",
+          "info": "Ids of authors (can accept string or array)",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    },
+    {
+      "name": "getSpecificSingleItem",
+      "description": "Retrieve a Single Item by slug.",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "Api key obtained from Elemeno",
+          "required": true
+        },
+        {
+          "name": "itemSlug",
+          "type": "String",
+          "info": "Slug of the item",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    },
+    {
+      "name": "getCollections",
+      "description": "Retrieve an array of all Collections.",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "Api key obtained from Elemeno",
+          "required": true
+        },
+        {
+          "name": "pageSize",
+          "type": "Number",
+          "info": "Number of the results at the page",
+          "required": false
+        },
+        {
+          "name": "pageNumber",
+          "type": "Number",
+          "info": "Number of the results page",
+          "required": false
+        },
+        {
+          "name": "sortBy",
+          "type": "String",
+          "info": "Sort option. Possible values: $dateUpdated(default), $dateCreated",
+          "required": false
+        },
+        {
+          "name": "sortOrder",
+          "type": "String",
+          "info": "Sort order. Possible values: DESC(default), ASC",
+          "required": false
+        },
+        {
+          "name": "titleFilterOperation",
+          "type": "String",
+          "info": "This keyword will allow you to filter by your title, regardless if it has been renamed. If was renamed, you can additionally use that name. Possible values: $equals, $not, $contains, $startsWith, $endsWith, $lessThan, $lessThanOrEqual, $greaterThan, $greaterThanOrEqual",
+          "required": false
+        },
+        {
+          "name": "titleFilterContent",
+          "type": "String",
+          "info": "Content of the title filter",
+          "required": false
+        },
+        {
+          "name": "timestampUpdatedFilterOperation",
+          "type": "String",
+          "info": "This keyword will allow you to filter by update timestamp. Possible values: $lessThan, $greaterThan",
+          "required": false
+        },
+        {
+          "name": "timestampUpdatedFilterContent",
+          "type": "Number",
+          "info": "Content of the update timestamp filter",
+          "required": false
+        },
+        {
+          "name": "timestampPublishedFilterOperation",
+          "type": "String",
+          "info": "This keyword will allow you to filter by create timestamp. Possible values: $lessThan, $greaterThan",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    },
+    {
+      "name": "getSingleCollection",
+      "description": "Retrieve a Single Collection by slug.",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "Api key obtained from Elemeno",
+          "required": true
+        },
+        {
+          "name": "collectionSlug",
+          "type": "String",
+          "info": "Slug of the collection",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    }, {
+      "name": "getAllCollectionItems",
+      "description": "Retrieve an array of Items within a specific Collection.",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "Api key obtained from Elemeno",
+          "required": true
+        },
+        {
+          "name": "collectionSlug",
+          "type": "String",
+          "info": "Slug of the collection",
+          "required": true
+        },
+        {
+          "name": "pageSize",
+          "type": "Number",
+          "info": "Number of the results at the page",
+          "required": false
+        },
+        {
+          "name": "pageNumber",
+          "type": "Number",
+          "info": "Number of the results page",
+          "required": false
+        },
+        {
+          "name": "sortBy",
+          "type": "String",
+          "info": "Sort option. Possible values: $dateUpdated(default), $dateCreated, $datePublished",
+          "required": false
+        },
+        {
+          "name": "sortOrder",
+          "type": "String",
+          "info": "Sort order. Possible values: DESC(default), ASC",
+          "required": false
+        },  {
+          "name": "titleFilterOperation",
+          "type": "String",
+          "info": "This keyword will allow you to filter by your title, regardless if it has been renamed. If was renamed, you can additionally use that name. Possible values: $equals, $not, $contains, $startsWith, $endsWith, $lessThan, $lessThanOrEqual, $greaterThan, $greaterThanOrEqual",
+          "required": false
+        },
+        {
+          "name": "titleFilterContent",
+          "type": "String",
+          "info": "Content of the title filter",
+          "required": false
+        },
+        {
+          "name": "priceFilterOperation",
+          "type": "String",
+          "info": "This keyword will allow you to filter by your price. Possible values: $equals, $lessThan, $lessThanOrEqual, $greaterThan, $greaterThanOrEqual",
+          "required": false
+        },
+        {
+          "name": "priceFilterContent",
+          "type": "Number",
+          "info": "Content of the price filter",
+          "required": false
+        },
+        {
+          "name": "timestampUpdatedFilterOperation",
+          "type": "String",
+          "info": "This keyword will allow you to filter by update timestamp. Possible values: $lessThan, $greaterThan",
+          "required": false
+        },
+        {
+          "name": "timestampUpdatedFilterContent",
+          "type": "Number",
+          "info": "Content of the update timestamp filter",
+          "required": false
+        },
+        {
+          "name": "timestampPublishedFilterOperation",
+          "type": "String",
+          "info": "This keyword will allow you to filter by create timestamp. Possible values: $lessThan, $greaterThan",
+          "required": false
+        },
+        {
+          "name": "timestampPublishedFilterContent",
+          "type": "Number",
+          "info": "Content of the create timestamp filter",
+          "required": false
+        },
+        {
+          "name": "editionFilterOperation",
+          "type": "String",
+          "info": "This keyword will allow you to filter by edition. Possible values: $equals, $startsWith, $endsWith, $not",
+          "required": false
+        },
+        {
+          "name": "editionFilterContent",
+          "type": "String",
+          "info": "Content of the edition filter",
+          "required": false
+        },
+        {
+          "name": "isAvailable",
+          "type": "Boolean",
+          "info": "If item is available",
+          "required": false
+        },
+        {
+          "name": "hasHardcover",
+          "type": "Boolean",
+          "info": "If item has hardcover",
+          "required": false
+        },
+        {
+          "name": "authorsIdList",
+          "type": "String",
+          "info": "Ids of authors (can accept string or array)",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    }, {
+      "name": "getCollectionItemBySlug",
+      "description": "Retrieve a Single Collection Item by slug.",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "Api key obtained from Elemeno",
+          "required": true
+        },
+        {
+          "name": "collectionSlug",
+          "type": "String",
+          "info": "Slug of the collection",
+          "required": true
+        },
+        {
+          "name": "itemSlug",
+          "type": "String",
+          "info": "Slug of the item",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    }, {
+      "name": "getCollectionItemById",
+      "description": "Retrieve a Single Collection Item by id.",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "Api key obtained from Elemeno",
+          "required": true
+        },
+        {
+          "name": "collectionSlug",
+          "type": "String",
+          "info": "Slug of the collection",
+          "required": true
+        },
+        {
+          "name": "itemId",
+          "type": "String",
+          "info": "Id of the item",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    }
+  ]
+}
