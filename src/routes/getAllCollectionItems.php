@@ -11,7 +11,7 @@ $app->post('/api/Elemeno/getAllCollectionItems', function ($request, $response, 
         $post_data = $validateRes;
     }
     //forming request to vendor API
-    $query_str = $settings['api_url'] . "collections/" . $post_data['args']['collectionSlug'] . '/items';
+    $query_str = $settings['api_url'] . "collection/" . $post_data['args']['collectionSlug'] . '/items';
 
     $body = array();
     if (isset($post_data['args']['pageSize']) && strlen($post_data['args']['pageSize']) > 0) {
