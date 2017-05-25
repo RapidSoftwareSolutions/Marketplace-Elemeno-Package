@@ -37,19 +37,22 @@
         },
         {
           "name": "sortBy",
-          "type": "String",
+          "type": "Select",
+          "options": ["$dateUpdated", "$dateCreated"],
           "info": "Sort option. Possible values: $dateUpdated(default), $dateCreated",
           "required": false
         },
         {
           "name": "sortOrder",
-          "type": "String",
+          "type": "Select",
+          "options": ["DESC", "ASC"],
           "info": "Sort order. Possible values: DESC(default), ASC",
           "required": false
         },
         {
           "name": "titleFilterOperation",
-          "type": "String",
+          "type": "Select",
+          "options": ["$equals", "$not", "$contains", "$startsWith", "$endsWith", "$lessThan", "$lessThanOrEqual", "$greaterThan", "$greaterThanOrEqual"],
           "info": "This keyword will allow you to filter by your title, regardless if it has been renamed. If was renamed, you can additionally use that name. Possible values: $equals, $not, $contains, $startsWith, $endsWith, $lessThan, $lessThanOrEqual, $greaterThan, $greaterThanOrEqual",
           "required": false
         },
@@ -61,7 +64,8 @@
         },
         {
           "name": "priceFilterOperation",
-          "type": "String",
+          "type": "Select",
+          "options": ["$equals", "$lessThan", "$lessThanOrEqual", "$greaterThan", "$greaterThanOrEqual"],
           "info": "This keyword will allow you to filter by your price. Possible values: $equals, $lessThan, $lessThanOrEqual, $greaterThan, $greaterThanOrEqual",
           "required": false
         },
@@ -73,7 +77,8 @@
         },
         {
           "name": "timestampUpdatedFilterOperation",
-          "type": "String",
+          "type": "Select",
+          "options": ["$lessThan", "$greaterThan"],
           "info": "This keyword will allow you to filter by update timestamp. Possible values: $lessThan, $greaterThan",
           "required": false
         },
@@ -85,7 +90,8 @@
         },
         {
           "name": "timestampPublishedFilterOperation",
-          "type": "String",
+          "type": "Select",
+          "options": ["$lessThan", "$greaterThan"],
           "info": "This keyword will allow you to filter by create timestamp. Possible values: $lessThan, $greaterThan",
           "required": false
         },
@@ -97,7 +103,8 @@
         },
         {
           "name": "editionFilterOperation",
-          "type": "String",
+          "type": "Select",
+          "options": ["$equals", "$startsWith", "$endsWith", "$not"],
           "info": "This keyword will allow you to filter by edition. Possible values: $equals, $startsWith, $endsWith, $not",
           "required": false
         },
@@ -183,19 +190,22 @@
         },
         {
           "name": "sortBy",
-          "type": "String",
+          "type": "Select",
+          "options": ["$dateUpdated", "$dateCreated"],
           "info": "Sort option. Possible values: $dateUpdated(default), $dateCreated",
           "required": false
         },
         {
           "name": "sortOrder",
-          "type": "String",
+          "type": "Select",
+          "options": ["DESC", "ASC"],
           "info": "Sort order. Possible values: DESC(default), ASC",
           "required": false
         },
         {
           "name": "titleFilterOperation",
-          "type": "String",
+          "type": "Select",
+          "options": ["$equals", "$not", "$contains", "$startsWith", "$endsWith", "$lessThan", "$lessThanOrEqual", "$greaterThan", "$greaterThanOrEqual"],
           "info": "This keyword will allow you to filter by your title, regardless if it has been renamed. If was renamed, you can additionally use that name. Possible values: $equals, $not, $contains, $startsWith, $endsWith, $lessThan, $lessThanOrEqual, $greaterThan, $greaterThanOrEqual",
           "required": false
         },
@@ -207,7 +217,8 @@
         },
         {
           "name": "timestampUpdatedFilterOperation",
-          "type": "String",
+          "type": "Select",
+          "options": ["$lessThan","$greaterThan"],
           "info": "This keyword will allow you to filter by update timestamp. Possible values: $lessThan, $greaterThan",
           "required": false
         },
@@ -219,7 +230,8 @@
         },
         {
           "name": "timestampPublishedFilterOperation",
-          "type": "String",
+          "type": "Select",
+          "options": ["$lessThan","$greaterThan"],
           "info": "This keyword will allow you to filter by create timestamp. Possible values: $lessThan, $greaterThan",
           "required": false
         }
@@ -286,18 +298,21 @@
         },
         {
           "name": "sortBy",
-          "type": "String",
+          "type": "Select",
+          "options": ["$dateUpdated", "$dateCreated", "$datePublished"],
           "info": "Sort option. Possible values: $dateUpdated(default), $dateCreated, $datePublished",
           "required": false
         },
         {
           "name": "sortOrder",
-          "type": "String",
+          "type": "Select",
+          "options": ["DESC", "ASC"],
           "info": "Sort order. Possible values: DESC(default), ASC",
           "required": false
         },  {
           "name": "titleFilterOperation",
-          "type": "String",
+          "type": "Select",
+          "options": ["$equals", "$not", "$contains", "$startsWith", "$endsWith", "$lessThan", "$lessThanOrEqual", "$greaterThan", "$greaterThanOrEqual"],
           "info": "This keyword will allow you to filter by your title, regardless if it has been renamed. If was renamed, you can additionally use that name. Possible values: $equals, $not, $contains, $startsWith, $endsWith, $lessThan, $lessThanOrEqual, $greaterThan, $greaterThanOrEqual",
           "required": false
         },
@@ -309,7 +324,8 @@
         },
         {
           "name": "priceFilterOperation",
-          "type": "String",
+          "type": "Select",
+          "options": ["$equals", "$lessThan", "$lessThanOrEqual", "$greaterThan", "$greaterThanOrEqual"],
           "info": "This keyword will allow you to filter by your price. Possible values: $equals, $lessThan, $lessThanOrEqual, $greaterThan, $greaterThanOrEqual",
           "required": false
         },
@@ -321,7 +337,8 @@
         },
         {
           "name": "timestampUpdatedFilterOperation",
-          "type": "String",
+          "type": "Select",
+          "options": ["$lessThan", "$greaterThan"],
           "info": "This keyword will allow you to filter by update timestamp. Possible values: $lessThan, $greaterThan",
           "required": false
         },
@@ -333,7 +350,8 @@
         },
         {
           "name": "timestampPublishedFilterOperation",
-          "type": "String",
+          "type": "Select",
+          "options": ["$lessThan", "$greaterThan"],
           "info": "This keyword will allow you to filter by create timestamp. Possible values: $lessThan, $greaterThan",
           "required": false
         },
@@ -345,7 +363,8 @@
         },
         {
           "name": "editionFilterOperation",
-          "type": "String",
+          "type": "Select",
+          "options": ["$equals", "$startsWith", "$endsWith", "$not"],
           "info": "This keyword will allow you to filter by edition. Possible values: $equals, $startsWith, $endsWith, $not",
           "required": false
         },
